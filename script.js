@@ -1,3 +1,10 @@
+const data = [
+    {item:'2019'},
+    {item:'2020'},
+    {item:'2021'},
+    {item:'2022'},
+]
+
 document.getElementById('Private').onclick = function PrivateClick() {
     document.getElementById('Private_radio').checked = true
     document.getElementById('Commertial_radio').checked = false
@@ -92,7 +99,8 @@ function scrollNext(){
     }
 }
 
-let ddd = true;
+
+let ddd = false;
 document.getElementById('select_s').onclick = function dd(){
         ddd = !ddd;
         function dddd(){
@@ -105,10 +113,30 @@ document.getElementById('select_s').onclick = function dd(){
         }
         document.getElementById('select_options').style.display = dddd();
         document.getElementById('form_container').scrollTop = document.getElementById('form_container').scrollHeight;
+        hello();
 }
-document.getElementById('options').onclick = function ds(){
-    document.getElementById('select_options').innerHTML = document.getElementById('options').innerHTML;
+let selectedBool = false;
+function jjj(index){
+    console.log(data[index].item)
+    document.getElementById('selected').innerHTML = data[index].item;
+    ddd=false;
+    selectedBool = true;
+    console.log(selectedBool)
+    document.getElementById('select_options').style.display = 'none';
+    progress();
 }
+
+const mmm = document.getElementById("select_options");
+function hello(){
+    const li = data.map((item,index)=>{
+        return `
+        <li value=${item.item} onclick="jjj(${index})" id="options">${item.item}</li>
+        `
+    }).join('')
+    console.log(li)
+    document.getElementById('select_options').innerHTML = li;
+}
+
 function progress(){
     let x = 0;
     if(NatureOfDl()){
@@ -126,18 +154,8 @@ function progress(){
     if(yearsBool){
         x = x+1;
     }
-    if(years2Bool){
+    if(selectedBool){
         x = x+1;
     }
     document.getElementById('progress_bar').style.width = `${x/6*100}%`
 }
-const data = [
-    {item:'2019'},
-    {item:'2020'},
-    {item:'2021'},
-    {item:'2022'},
-]
-const li = data.map((item,index)=>(
-    document.createElement('li').innerHTML=item.item
-))
-document.getElementById('select_options').appendChild(li)
