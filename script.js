@@ -89,9 +89,6 @@ years.onchange = function validName(){
 }
 
 function scrollNext(){
-    console.log(NatureOfDl())
-    console.log(nameBool)
-    console.log(TypeOfDl())
     if(nameBool && NatureOfDl() && TypeOfDl()){
         let scrollcont = document.getElementById('form_container');
         scrollcont.scrollLeft = scrollcont.scrollWidth
@@ -158,4 +155,8 @@ function progress(){
         x = x+1;
     }
     document.getElementById('progress_bar').style.width = `${x/6*100}%`
+}
+document.getElementById('button_cont').onclick = function(){
+    let scrollcont = document.getElementById('form_container');
+    scrollcont.scrollLeft = 0;
 }
