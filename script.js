@@ -57,6 +57,7 @@ nameee.onchange = function validName(){
     else{
         nameBool = true;
         scrollNext();
+        progress();
     }
 }
 place.onchange = function validName(){
@@ -66,6 +67,7 @@ place.onchange = function validName(){
     else{
         placeBool = true;
         scrollNext();
+        progress();
     }
 }
 years.onchange = function validName(){
@@ -75,6 +77,7 @@ years.onchange = function validName(){
     else{
         yearsBool = true;
         scrollNext();
+        progress();
     }
 }
 

@@ -29,6 +29,8 @@ body{
  background-color: tomato;
  width: 0%;
  margin: auto 0;
+ /* transition-property: width; */
+ transition: width 0.4s ease-in-out !important;
 }
 .title{
  margin: 18px 0;
