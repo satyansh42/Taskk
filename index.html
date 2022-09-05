@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- <script src="script.js"></script> -->
+    <title>Task</title>
+</head>
+<body>
+    <div class="body_header">
+        Driving License Renewal
+    </div>
+    <div class="container">
+        <div class="alt_container">
+            <div class="progress_bar" id="progress_bar"></div>
+            <div class="title">
+                <div class="header">Let's get started!</div>
+                <div class="p">Add your details(As per your registred records)</div>
+            </div>
+            <div class="form_container" id="form_container">
+                <div class="form_container_1">
+                    <form action="" name="form1">
+                        <label class="label" for="name">Name</label>
+                        <input class="input_region" type="text" id="name" placeholder="Enter Name">
+                        <div class="radio_form_cont">
+                            <label class="label" for="natureDl">Nature of Driving License</label>
+                            <div class="radio_container">
+                                <div class="alt_radio_container input_region" id="Private">
+                                    <label for="natureDl">Private</label>
+                                    <input type="radio" id="Private_radio" name="Nature" value="Private">
+                                </div> 
+                                <div class="alt_radio_container input_region" id="Commertial">
+                                    <label for="natureDl">Commertial</label>
+                                    <input type="radio" id="Commertial_radio" name="Natur" value="Commertial">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio_form_cont">
+                            <label class="label" for="natureDl">Type of Previous Driving License</label>
+                            <div class="radio_container">
+                                <div class="alt_radio_container input_region" id="Paper">
+                                    <label for="natureDl">Paper Driving License</label>
+                                    <input type="radio" id="Paper_radio" value="Private">
+                                </div>
+                                <div class="alt_radio_container input_region" id="Smart">
+                                    <label for="natureDl">Smart Driving License</label>
+                                    <input type="radio" id="Smart_radio" value="Commertial">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form_container_2">
+                    <form action="" name="form2">
+                        <label class="label" for="place">Place where Driving License was issued</label>
+                        <input class="input_region" name="place" type="text" placeholder="Enter Place Name">
+                        <label class="label" for="year">Issued Year of License</label>
+                        <select class="input_region" name="years" id="">
+                            <option value="">Choose issued year of License</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                        </select>
+                        <label class="label" for="year">Type of Previous Driving License</label>
+                        <div class="input_region" name="years2" id="select">
+                            <ul id="select_s" style="position: relative;display: flex; justify-content:space-between; margin: 0; align-items: center; height: 45px; padding: 0 10px;">
+                                <li value="" id="selected">Choose issued type of License</li>
+                                <li style="transform: rotate(90deg);">></li>
+                            </ul>
+                            <ul id="select_options" class="options_cont" style="display: none;">
+                                <li value="2022" id="options">2022</li>
+                                <li value="2021" id="options">2021</li>
+                                <li value="2020" id="options">2020</li>
+                                <li value="2019" id="options">2019</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="button_cont">
+            <button>&#60; &nbsp; Back</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
